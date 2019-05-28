@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+.btn {
+    display: inline-block;
+
+    padding: .5em 1em;
+    border: none;
+    border-radius: 1em;
+
+    background: #fff;
+    text-align: center;
+    text-decoration: none;
+    color: #000;
+    box-shadow: 0px 0px 20px -10px #000;
+    outline: none;
+    transition: transform 150ms ease, box-shadow 150ms ease;
+    cursor: pointer;
+}
+.btn-grid,
+.btn-list,
+.btn-test {
+    font-size: 1.25rem;
+}
+
+.btn-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0;
+}
+
+.btn-order,
+.btn-add,
+.btn-remove {
+    border: 1px solid #AD8D68;
+    border-radius: .5rem;
+    color: #AD8D68;
+    box-shadow: none;
+    transition: background 200ms ease, color 200ms ease;
+}
+
+.btn-order {
+    font-size: 1.15rem;
+}
+
+.btn-order:hover,
+.btn-add:hover,
+.btn-remove:hover {
+    background: #AD8D68;
+    color: #fff;
+}
+
+.wrapper header {
+    position: relative;
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.logo-wrapper {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 7.5rem;
+    margin: 1rem 0 0 0;
+    background-image: url(../card_photo/americano_metrovaya.png);
+    background-position-y: 50%;
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.logo {
+    box-shadow: 0px 20px 20px -20px #000;
+}
+
+.btn-sort-calories,
+.btn-sort-price {
+    font-size: 1.25rem;
+    margin: 1rem;
+}
+
+.show-pizzas {
+    width: fit-content;
+    height: fit-content;
+}
+
+.btn-grid { margin: 1rem; }
+
+.btn-list { margin: 1rem; }
+
+.btn-grid:hover,
+.btn-list:hover,
+.btn-test:hover {
+    transform: scale(.99);
+    box-shadow: 0px 0px 10px -5px #000;
+}
+
+.products {
+    width: 100%;
+    box-shadow: inset 0px 20px 40px -40px #000;
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.product-list {
+    padding: 1rem;
+}
+
+.ingridients-to-add {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ingridients-to-add span {
+    display: block;
+    width: fit-content;
+    margin: 0 5px 0 0;
+    font-size: 1.1rem;
+}
+
+.ingridients-to-add span:hover {
+    color: #009E0B;
+    cursor: pointer;
+}
+
+.ingridients-to-add span:first-of-type { text-transform: capitalize;}
+
+.ingridients-to-add span::after { content: ','; }
+
+.ingridients-to-add span:last-of-type::after { content: ''; }
+
+.ingridients-to-remove {
+    transform: translateY(-3rem);
+}
+
+.card {
+    max-width: 380px;
+    width: calc(50% - 3rem);
+    height: fit-content;
+    margin: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 8px -3px #000;
+    transition: box-shadow 150ms ease;
+    overflow: hidden;
+}
+
+.img-wrapper {
+    overflow: hidden;    
+}
+
+.card img { 
+    display: block;
+    width: 100%;
+    transition: transform 400ms ease-in-out;
+}
+
+.card:hover img {
+    transform: scale(1.1);
+}
+
+figcaption { 
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2rem 2rem 2rem; 
+}
+
+figcaption h4 {
+    position: absolute;
+    margin: 2rem 0 0 0;
+    color: #BFBFBF;
+    font-weight: 100;
+}
+
+.name {
+    font-size: 2rem;
+    margin: .5rem 0 .75rem 0; 
+    text-transform: capitalize;
+    color: #AD8D68;
+}
+
+.calories {
+    margin-bottom: 0;
+}
+
+.calories::after { content: ' kcal' }
+
+.price::after { content: '\0024'; }
+
+.item {
+    width: fit-content;
+    display: flex;
+    border-radius: 1rem;
+    margin: 0 0 1rem 0;
+    box-shadow: 0 0 9px -3px #000;
+    transition: transform 150ms ease-in-out;
+}
+
+.item:hover {
+    transform: translateX(1rem);
+}
+
+.item img {
+    width: 6rem;
+    height: 6rem;
+}
+
+.item figcaption {
+    display: flex;
+    flex-direction: row;
+    padding: 2rem;
+
+}
+
+.item .name,
+.item .calories,
+.item .price {
+    margin: 0 1rem;
+
+    display: flex;
+    align-items: center;
+}
+
+.composition span {
+    position: relative;
+    cursor: pointer;
+}
+
+.composition span::before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #FF4627;
+    top: 50%;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 200ms ease-in-out;
+}
+
+.composition span:hover::before {
+    transform: scale(1);
+}
+
+
+.name,
+.composition { 
+    transition: transform 350ms ease-in-out; 
+}
+
+.img-wrapper { 
+    transition: opacity 350ms ease 250ms, transform 350ms ease-in-out; 
+}
+
+.hide-img {
+    display: none;
+    opacity: 0;
+    transition: opacity 250ms ease;
+}
+
+.show-ingridients {
+    transform: translateY(0);
+}
+
+@media only all and (max-width: 1150px) {
+    .card {
+        max-width: 380px;
+        width: calc(50% - 3rem);
+    }
+}
+
+@media only all and (max-width: 900px) {
+    .card {
+        width: calc(430px - 3rem);
+    }
+}
+
+@media only all and (max-width: 580px) {
+    .card {
+        width: calc(100% - 3rem);
+    }
+}
