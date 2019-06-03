@@ -11,20 +11,85 @@
     <section class="wrapper">
         <header>
             <section class="logo-wrapper">
-                <p class="logo">PIZZA</p>
+                <p class="logo">Pizza</p>
             </section>
-            <section class="show-pizzas">
-                <h2>Choose how to display pizzas</h2>
-                <button class="btn btn-grid">Show grid</button>
-                <button class="btn btn-list">Show list</button>
-            </section>
-            <section class="sort">
-                <h2>You can sort pizzas by clicking this buttons</h2>
-                <button class="btn btn-sort-calories">Sort by calories</button>
-                <button class="btn btn-sort-price">Sort by price</button>
+            <section class="shopping-card-wrapper">
+                <div class="shopping-card">
+                    <p class="shopping-card-text">There are <span class="amount">0</span> pizzas in your basket</p>
+                    <img src="icons/shopping-basket.svg" alt="basket_icon">
+                </div>
             </section>
         </header>
+        <section class="controll">
+            <section class="show-pizzas">
+                <button class="btn-grid"><img class="btn-icon" src="icons/grid.svg" alt="icon"></button>
+                <button class="btn-list"><img class="btn-icon" src="icons/list.svg" alt="icon"></button>
+            </section>
+            <section class="remove-custom">
+                <button class="btn remove-all">Remove all custom pizza's</button>
+                <button class="btn remove-target">Remove target custom pizza</button>
+            </section>
+            <section class="sort">
+                <p class="sort-text">Sort by: 
+                    <span class="calories-sort">calories</span>
+                    or 
+                    <span class="price-sort">price</span>
+                    <span class="selected"></span>
+                </p>
+                <span class="how-sort cheap">
+                    <img src="icons/arrow.svg" alt="icon">
+                </span>
+            </section>
+        </section>
+        <section class="custom-products">
+        </section>
         <main class="products"></main>
+
+        <div class="create-pizza">
+            <p>Create your pizza!</p>
+        </div>
+        <section class="pizza-constructor-wrapper">
+            <section class="pizza-constructor">
+                <span class="close-constructor"></span>
+                <h2>Create your own PIZZA!</h2>
+                <div class="enter-name">
+                    <p>Enter pizza name: </p>
+                    <input class="custom-name" type="text">
+                    <button class="btn btn-submit-name">Submit name</button>
+                </div>
+                <div class="entered-name">
+                    <p>You entered: <span class="entered-name-value"></span></p>
+                </div>
+                <div class="ingridients">
+                    <div class="selected-ingridients">
+                        <h3>Choosen ingridients</h3>
+                        <div class="selected-ingridients-wrapper"></div>
+                    </div>
+                    <div class="available-ingridients">
+                        <h3>Available ingridients</h3>
+                        <div class="available-ingridients-wrapper"></div>
+                    </div>
+                </div>
+                <div class="result">
+                    <p>Your pizza will contain <span class="result-calories"></span> calories</p>
+                    <p>It wil cost <span class="result-price"></span></p>
+                    <button class="btn submit-custom">Submit this pizza</button>
+                </div>
+            </section>
+        </section>
+        <section class="basket-wrapper">
+            <section class="basket">
+                <h2>basket</h2>
+                <div class="order-list"></div>
+                <div class="total">
+                    <div class="sum-wrapper">
+                        <span class="sum-text">Sum:</span>
+                        <span class="sum"></span>
+                    </div>
+                    <button class="btn btn-send-order">Order</button>
+                </div>
+            </section>
+        </section>
     </section>
     <script src="js/script.js"></script>
 </body>
